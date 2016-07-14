@@ -14,9 +14,6 @@ require 'omniauth-facebook' # Facebook Authentication
 require 'omniauth'
 require 'omniauth-github'
 
-require 'omniauth'
-require 'omniauth-github'
-require 'omniauth-facebook'
 require 'dotenv'
 Dotenv.load
 
