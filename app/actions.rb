@@ -1,6 +1,10 @@
 # Homepage (Root path)
 enable :sessions
 
+helpers do
+
+end
+
 get '/', '/index' do
   erb :index
 end
@@ -16,10 +20,13 @@ get '/era' do
 end
 
 get '/result' do
+  @result = Result.random_result(4)
+  # @result = Result.random_result(params[:era_id])
   erb :result
 end
 
 get '/comment' do
+  @comments = Comment.all.limit(10)
   erb :comment
 end
 

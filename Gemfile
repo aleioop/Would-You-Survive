@@ -10,8 +10,13 @@ gem 'sinatra-activerecord'
 
 gem 'puma'
 gem 'tux'
+
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'omniauth-facebook'
+
+gem 'dotenv'
+
 
 # These gems are only installed when run as `bundle install --without production`
 group :development, :test do
