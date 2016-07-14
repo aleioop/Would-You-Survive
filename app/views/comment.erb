@@ -2,56 +2,19 @@
   <h1>Top 10 last words</h1>
 </section>
 <main>
+
+  <% @comments.each do |comment| %>
+
   <div>
     <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
+    <p><%= comment.vote %> </p>
+    <p><%= Era.find(Result.find(comment.reason_id).era_id).name  %></p>
+    <p><%= comment.body %></p>
   </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
-  <div>
-    <button type="button">Like</button>
-    <p>Number of votes</p>
-    <p>Hard cheese manchego taleggio. Cow queso squirty cheese brie camembert de normandie</p>
-  </div>
+
+
+ <% end %>
+
 </main>
 <footer>
   <p>&copy; 2016 KoolKats, Inc.</p>

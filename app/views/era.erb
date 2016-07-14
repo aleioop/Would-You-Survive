@@ -3,13 +3,15 @@
 </section>
 <main>
 
-  <% @eras.each do |era| %>
-    <a href="">
-      <figure>
-        <img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2635f17894dffc22d8073624dad76875">
-      </figure>
-    </a>
-  <% end %>
+<% @eras.each do |era| %>
+   <a href="">
+     <figure>
+       <img src="<%=era.pic_url%>">
+     </figure>
+   </a>
+
+
+ <% end %>
 <!-- 
   <figure>
     <img src="https://unsplash.com/photos/6roxyet376g">
