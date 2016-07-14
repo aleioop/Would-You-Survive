@@ -44,6 +44,9 @@ get '/auth/github/callback' do
   erb :info
 end
 
+get '/auth/facebook/callback' do
+  erb :info
+end
 
 post '/comment/new' do
   comment = Comment.new(
