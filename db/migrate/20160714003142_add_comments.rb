@@ -5,6 +5,7 @@ class AddComments < ActiveRecord::Migration
       t.belongs_to :era
       t.belongs_to :reason
       t.string :body
+      t.integer :vote
     end
   end
 end
