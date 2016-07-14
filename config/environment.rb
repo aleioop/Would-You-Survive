@@ -31,7 +31,7 @@ configure do
   
   use OmniAuth::Builder do
     provider :github, '', '', scope: "user:email"
-    provider :facebook, ENV['FACEBOOK_APP_ID'], ''
+    provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
   end
 
   set :views, File.join(Sinatra::Application.root, "app", "views")
