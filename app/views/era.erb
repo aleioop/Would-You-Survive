@@ -1,21 +1,14 @@
 <section>
-<h1>Choose an era:</h1>
+  <h1>Choose an era:</h1>
 </section>
 <main>
-<a href="/">
-  <figure>
-    <img src="https://images.unsplash.com/photo-1451587910776-e7c3c3a94441?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2134d843e0e936a3d66bf0613c2068bf">
-  </figure>
-</a>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1417261726333-db38183ebcb1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c353441fa4bda26609d56c229c271597">
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1453057961357-5554bca12b05?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=b89597ad5d8e4f9774534570f8307891">
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1439754525045-a9e8393a2692?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=551926ac3b6a91e4ec0d38458584fbc4">
-  </figure>
+  <% @eras.each do |era| %>
+    <a href="">
+      <figure>
+        <img src="<%=era.pic_url%>">
+      </figure>
+    </a>
+  <% end %>
 </main>
 <footer>
   <p>&copy; 2016 KoolKats, Inc.</p>
