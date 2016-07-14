@@ -41,6 +41,9 @@ GEM
       rack (>= 1.0, < 3)
     omniauth-facebook (3.0.0)
       omniauth-oauth2 (~> 1.2)
+    omniauth-github (1.1.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
@@ -97,7 +100,9 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  omniauth
   omniauth-facebook
+  omniauth-github
   pg
   pry
   puma
