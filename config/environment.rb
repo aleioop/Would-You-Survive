@@ -34,11 +34,11 @@ configure do
   set :server, :puma
 
   enable :sessions
-  set :session_secret, ENV['SESSION_KEY'] || 'lighthouselabssecret''
+  set :session_secret, ENV['SESSION_KEY'] || 'lighthouselabssecret'
   
   use OmniAuth::Builder do
     provider :github, '', '', scope: "user:email"
-    provider :facebook, 'ENV['FACEBOOK_APP_ID']',''
+    provider :facebook, ENV['FACEBOOK_APP_ID'], ''
   end
 
   set :views, File.join(Sinatra::Application.root, "app", "views")
