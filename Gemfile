@@ -10,7 +10,12 @@ gem 'sinatra-activerecord'
 
 gem 'puma'
 gem 'tux'
+<<<<<<< HEAD
 gem 'omniauth-facebook'
+=======
+gem 'omniauth'
+gem 'omniauth-github'
+>>>>>>> a0f248ef1fd3e5591de20f0b3e2f5c2d9fcba96b
 
 # These gems are only installed when run as `bundle install --without production`
 group :development, :test do
