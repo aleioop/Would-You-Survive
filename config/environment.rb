@@ -7,23 +7,19 @@ require 'active_support/all'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 require 'omniauth-facebook' # Facebook Authentication 
 
-=======
+
 require 'omniauth'
 require 'omniauth-github'
->>>>>>> a0f248ef1fd3e5591de20f0b3e2f5c2d9fcba96b
-=======
+
 require 'omniauth'
 require 'omniauth-github'
 require 'omniauth-facebook'
 require 'dotenv'
 Dotenv.load
 
->>>>>>> facebook_integration
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
