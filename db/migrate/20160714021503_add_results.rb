@@ -1,6 +1,6 @@
-class AddDyingReasons < ActiveRecord::Migration
+class AddResults < ActiveRecord::Migration
   def change
-    create_table :dying_reasons do |t|
+    create_table :results do |t|
       t.belongs_to :era
       t.string :body
 

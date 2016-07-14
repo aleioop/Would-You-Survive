@@ -20,17 +20,17 @@ ActiveRecord::Schema.define(version: 20160714021503) do
     t.string  "body"
   end
 
-  create_table "dying_reasons", force: :cascade do |t|
-    t.integer  "era_id"
-    t.string   "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "eras", force: :cascade do |t|
     t.string   "name"
     t.string   "pic_url"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.integer  "era_id"
+    t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
