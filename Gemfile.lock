@@ -40,13 +40,18 @@ GEM
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> facebook_integration
     omniauth-facebook (3.0.0)
       omniauth-oauth2 (~> 1.2)
-=======
     omniauth-github (1.1.2)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
+<<<<<<< HEAD
 >>>>>>> a0f248ef1fd3e5591de20f0b3e2f5c2d9fcba96b
+=======
+>>>>>>> facebook_integration
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
@@ -104,11 +109,18 @@ PLATFORMS
 DEPENDENCIES
   activesupport
 <<<<<<< HEAD
+<<<<<<< HEAD
   omniauth-facebook
 =======
+=======
+>>>>>>> facebook_integration
   omniauth
+  omniauth-facebook
   omniauth-github
+<<<<<<< HEAD
 >>>>>>> a0f248ef1fd3e5591de20f0b3e2f5c2d9fcba96b
+=======
+>>>>>>> facebook_integration
   pg
   pry
   puma
