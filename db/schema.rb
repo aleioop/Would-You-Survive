@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20160714021503) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "era_id"
-    t.integer "reason_id"
+    t.integer "result_id"
     t.string  "body"
+    t.integer "vote"
   end
 
   create_table "eras", force: :cascade do |t|
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160714021503) do
   create_table "results", force: :cascade do |t|
     t.integer  "era_id"
     t.string   "body"
+    t.boolean  "is_dead"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

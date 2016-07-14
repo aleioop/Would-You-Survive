@@ -1,0 +1,16 @@
+<section>
+  <h1>Choose an era:</h1>
+</section>
+<main>
+
+<% @eras.each do |era| %>
+   <a href="">
+     <figure>
+       <img src="<%=era.pic_url%>">
+     </figure>
+   </a>
+ <% end %>
+</main>
+<footer>
+  <p>&copy; 2016 KoolKats, Inc.</p>
+</footer>

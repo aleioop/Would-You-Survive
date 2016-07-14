@@ -15,7 +15,7 @@ rake db:create_migration NAME=add_<table>
 
 git checkout development    # Change your branch to the development branch 
 
-git checkout -b myNewBranch development    # Add a new branch from which we work on our features
+git checkout -b myNewBranch development    # Add a new branch from which we work on our features. JUST USE CHECKOUT WITHOUT IF BRANCH EXISTS
 
 <do work, right now youre in the myNewBranch>
 
