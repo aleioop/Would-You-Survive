@@ -3,10 +3,13 @@
 </section>
 <main>
   <% @eras.each do |era| %>
-    <a href="">
-      <figure>
+    <a href="/era/<%=era.id%>">
+      <div>
+        <%=era.name%>
+      </div>
+      <!-- <figure>
         <img src="<%=era.pic_url%>">
-      </figure>
+      </figure> -->
     </a>
   <% end %>
 </main>

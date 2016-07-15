@@ -19,10 +19,10 @@
 
 
   <div>
-    <form method="post" action="/comment/new">
+    <form method="post" action="/comment/new/<%= @result.id %>">
       <div>
         <label>Any last words?</label>
-        <input type="text" name="last_words">
+        <input type="text" name="body">
       </div>
       <div>
         <input type="submit" value="Submit">
