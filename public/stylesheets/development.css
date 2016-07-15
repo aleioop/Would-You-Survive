@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
+@import url('"https://fonts.googleapis.com/css?family=Roboto:400,700"');
+/* global css goes here */
+body {
+  background-color: #205165;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.8; }
 
+.title-display {
+  background-color: #205165;
+  font-family: "Patua One", sans-serif;
+  font-size: 100px;
+  color: #FEFDFE; }
+
+.introduction {
+  color: #FEFDFE; }
+
+/*  module css goes here */
+/* element css goes here */
 
 /*# sourceMappingURL=development.css.map */
