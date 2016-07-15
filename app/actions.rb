@@ -19,6 +19,11 @@ get '/era' do
   erb :era
 end
 
+get '/char' do
+  @chars = Characteristic.all
+  erb :characteristic
+end
+
 get '/result' do
   @result = Result.random_result(4)
   # @result = Result.random_result(params[:era_id])
