@@ -19,7 +19,6 @@ gem 'omniauth-facebook'
 
 gem 'dotenv'
 
-
 gem 'sass'
 
 
