@@ -1,14 +1,24 @@
+
+<main>
+
+  <h2>Your comment</h2>
+  <p><%= Era.find(Result.find(@comment.result_id).era_id).name  %></p>
+  <p><%= Result.find(@comment.result_id).body  %></p>
+  <p><%= @comment.body %></p>
+  <div>
+    <button type="button">Share on Facebook</button>
+  </div> 
+
 <section>
   <h1>Top 10 last words</h1>
 </section>
-<main>
-
   <% @comments.each do |comment| %>
 
   <div>
     <button type="button">Like</button>
     <p><%= comment.vote %> </p>
-    <p><%= Era.find(Result.find(comment.reason_id).era_id).name  %></p>
+    <p><%= Era.find(Result.find(comment.result_id).era_id).name  %></p>
+    <p><%= Result.find(comment.result_id).body  %></p>
     <p><%= comment.body %></p>
   </div>
 

@@ -70,13 +70,17 @@ get '/auth/facebook/callback' do
 end
 
 post '/comment/new/:id' do
-  comment = Comment.new(
+  @comment = Comment.new(
     user_id: session[:user].id,
     result_id: params[:id],
     body: params[:body] )
 
-  comment.save
-  redirect '/comment'
+  @comment.save
+  @comments = Comment.all.limit(10)
+  erb :comment
+  # session[:comment] = @comment
+  # binding.pry
+  # redirect '/comment'
 end
 
 post '/user' do
