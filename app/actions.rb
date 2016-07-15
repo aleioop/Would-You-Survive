@@ -45,11 +45,21 @@ get '/top_last_word' do
   erb :top_last_word
 end
 
-get '/auth/github/callback' do
-  erb :info
-end
+# get '/auth/github/callback' do
+#   erb :info
+# end
 
 get '/auth/facebook/callback' do
+  auth = request.env['omniauth.auth']
+  user = User.create(
+    fbid: auth[:uid], 
+    name: auth[:info][:name],
+    email: auth[:info][:email],
+    image: auth[:info][:image]
+    )
+  session.clear
+  session[:user] = user
+  # binding.pry
   erb :info
 end
 
@@ -64,6 +74,9 @@ post '/comment/new' do
   redirect :result
 end
 
-post '/user/new' do
-  erb :era
+post '/user' do
+  session[:user].weight = params[:weight]
+  session[:user].height = params[:height]
+  session[:user].save
+  redirect '/era'
 end

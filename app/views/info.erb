@@ -2,7 +2,8 @@
   <h1>User Information</h1>
 </section>
 <main>
-  <form method="post" action="/user/new">
+  Hi <%= session[:user].name %>
+  <form method="post" action="/user">
     <div>
       <label> Weight: </label>
       <input type="text" name="weight">
