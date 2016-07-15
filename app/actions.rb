@@ -6,6 +6,7 @@ helpers do
 end
 
 get '/', '/index' do
+  session.clear
   erb :index
 end
 
