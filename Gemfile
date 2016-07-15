@@ -1,5 +1,6 @@
 
 # A sample Gemfile
+
 source "https://rubygems.org"
 
 gem 'rake'
@@ -17,6 +18,7 @@ gem 'omniauth-github'
 gem 'omniauth-facebook'
 
 gem 'dotenv'
+
 gem 'sass'
 
 
