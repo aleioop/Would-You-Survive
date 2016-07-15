@@ -20,6 +20,11 @@ get '/era' do
   erb :era
 end
 
+get '/era/:id' do
+  @result = Result.random_result(params[:id])
+  erb :result
+end
+
 get '/char' do
   @chars = Characteristic.all
   erb :characteristic
@@ -36,10 +41,10 @@ get '/comment' do
   erb :comment
 end
 
-get '/:era_id/result' do
-  @result = Result.random_result(params[:era_id])
-  erb :result
-end
+# get '/:era_id/result' do
+#   @result = Result.random_result(params[:era_id])
+#   erb :result
+# end
 
 get '/top_last_word' do
   @words = Comment.top_words
@@ -64,15 +69,18 @@ get '/auth/facebook/callback' do
   erb :info
 end
 
-post '/comment/new' do
-  comment = Comment.new(
-    user_id: session[user].id,
-    era_id: params[:era_id],
-    result_id: params[:result_id],
+post '/comment/new/:id' do
+  @comment = Comment.new(
+    user_id: session[:user].id,
+    result_id: params[:id],
     body: params[:body] )
 
-  comment.save
-  redirect :result
+  @comment.save
+  @comments = Comment.all.limit(10)
+  erb :comment
+  # session[:comment] = @comment
+  # binding.pry
+  # redirect '/comment'
 end
 
 post '/user' do
