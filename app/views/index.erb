@@ -1,15 +1,36 @@
 <!-- Script for basic integration with Facebook. Likely replaced later with the full login script -->
 <!-- TODO: Utilise the full login script - must check if I can hide my authentication tokens and info.  -->
 <!-- TODO: Check in with omniauth facebook -->
-<% erb :'_facebook_script' %>
-<section class="indexbg">
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '644001135749135',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<section>
   <h1>Would you have survived?</h1>
 </section>
 <main>
+  <figure>
+    <img src="https://unsplash.com/photos/Mik1OWiveRs">
+  </figure>
   <p>
     Dreamcatcher vice blog, humblebrag kale chips YOLO waistcoat cronut squid sustainable kinfolk everyday carry echo park pug. Skateboard kale chips umami small batch, affogato mixtape yr tousled asymmetrical DIY. 
   </p>
-  <a href="/auth/facebook">Login with facebook</a>
+  <button type="button">Login with facebook</button>
 </main>
 <footer>
   <p>&copy; 2016 KoolKats, Inc.</p>
