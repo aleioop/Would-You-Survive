@@ -12,7 +12,7 @@ class Result < ActiveRecord::Base
     Result.create(era_id: 1, body: "You, T-rex master, only survived one year in the Stone Age before dying from a paper cut.", is_dead: true)
     Result.create(era_id: 1, body: "You, big neanderthal, only survived 3 days in the Stone Age before dying of bone deformity from lack of Vitamin C. Shoulda stocked up on dat OJ brah.", is_dead: true)
     Result.create(era_id: 2, body: "You, mere plebeian, only survived 2 weeks in Ancient Rome before dying from malaria after having contracted it from your secret insulae lover. Love bites eh.", is_dead: true)
-    Result.create(era_id: 2, body: "*You, noble gladiator, only survived 6 weeks in Ancient Rome before getting your head chopped off at the Coloseum's weekly gladiatorial contest.", is_dead: true)
+    Result.create(era_id: 2, body: "You, noble gladiator, only survived 6 weeks in Ancient Rome before getting your head chopped off at the Coloseum's weekly gladiatorial contest.", is_dead: true)
     Result.create(era_id: 2, body: "You, slave to the Aquillia patrician family, died of exhaustion the second you arrived in Ancient Rome.", is_dead: true)
     Result.create(era_id: 2, body: "You, petty chariot thief, survived only a week in Ancient Rome before being thrown into a cage filled with wild beasts to entertain the emperor.", is_dead: true)
     Result.create(era_id: 3, body: "You, esteemed village blacksmith, only survied two years in the Dark Ages before dying of the Black plague.", is_dead: true)
@@ -25,7 +25,7 @@ class Result < ActiveRecord::Base
     Result.create(era_id: 4, body: "You, the Tokugawan Shogun, only survived 4 years in the Edo Period before being boiled to death by your unhappy subjects. That's why mama said be nice.", is_dead: true)
     Result.create(era_id: 5, body: "You, Stalin's right arm, only survived 2 years in Soviet Russia before being assassinated by the NKVD. Your existence can't be proven #censorship #bigbrother.", is_dead: true)
     Result.create(era_id: 5, body: "You, honorable soldier of the Red Army, only survived a month in Soviet Russia before being shot alongside your fellow army men for deserting the regime.", is_dead: true)
-    Result.create(era_id: 5, body: "You, ", is_dead: true)
-    Result.create(era_id: 5, body: "", is_dead: true)
+    Result.create(era_id: 5, body: "You, poor peasant, only survived a month in Soviet Russia before dying from frost bite during a trek to the liquor store in Siberia. Shoulda packed some extra vodka huh.", is_dead: true)
+    Result.create(era_id: 5, body: "You, american spy, only survived 2 years in Soviet Russia before dying in Stalin's torture chamber.", is_dead: true)
   end
 end
