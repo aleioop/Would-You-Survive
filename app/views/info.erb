@@ -1,19 +1,19 @@
 <section>
-  <h1>User Information</h1>
+  <h1 class=user-info-title>User Information</h1>
 </section>
 <main>
   Hi <%= session[:user].name %>
   <form method="post" action="/user">
-    <div>
+    <fieldset class="form-group">
       <label> Weight: </label>
-      <input type="text" name="weight">
+      <input type="text" name="weight" class="form-control">
       <label>kg</label>
-    </div>
-    <div>
+    </fieldset>
+    <fieldset class="form-group">
       <label>Height: </label>
-      <input type="text" name="height">
-
+      <input type="text" name="height" class="form-control">
       <label>cm</label>
+    </fieldset>
 
     <div>
       <input type="submit" value="Submit" class="btn btn-primary btn-lg round">
@@ -23,3 +23,14 @@
 <footer>
   <p>&copy; 2016 KoolKats, Inc.</p>
 </footer>
+
+<form>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="formGroupExampleInput2">Another label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </fieldset>
+</form>
