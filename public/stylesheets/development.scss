@@ -18,24 +18,28 @@ $spacing-unit: $base-font-size * $base-line-height / 2;
 
 /* global css goes here */
 body {
-  background-color: $site-background-blue;
+  background-color: $site-mid-dark;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+
 }
 
-
 .title-display {
-  background-color: $site-background-blue;
-  font-family: $display-font-family;
-  font-size: 100px;
   color: $site-white-color;
+  font-family: $display-font-family;
+  font-size: 109px;
+  line-height: height;
 }
 
 .introduction {
   color: $site-white-color;
 }
 
+
+.index-footer { 
+  border-top: 2px solid $site-accent-dark;  
+ }
 
 
 /*  module css goes here */

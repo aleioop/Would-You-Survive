@@ -2,19 +2,22 @@
 @import url('"https://fonts.googleapis.com/css?family=Roboto:400,700"');
 /* global css goes here */
 body {
-  background-color: #205165;
+  background-color: #82848C;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.8; }
 
 .title-display {
-  background-color: #205165;
+  color: #FEFDFE;
   font-family: "Patua One", sans-serif;
-  font-size: 100px;
-  color: #FEFDFE; }
+  font-size: 109px;
+  line-height: height; }
 
 .introduction {
   color: #FEFDFE; }
+
+.index-footer {
+  border-top: 2px solid #D7D1D4; }
 
 /*  module css goes here */
 /* element css goes here */
