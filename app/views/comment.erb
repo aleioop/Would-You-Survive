@@ -1,48 +1,39 @@
 
-<main>
-<section id="ur-comment">
-  <h1 class="center-head">Your last message</h1>
-  <p><%= @comment.body %></p>
-
-  <article class="show_result">
-    <h3><%= Era.find(Result.find(@comment.result_id).era_id).name  %></h3>
-    <p><%= Result.find(@comment.result_id).body  %></p>
-  </article>
-
-<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=http://onceuponatime.wikia.com/wiki/Once_Upon_a_Time_Wiki" target="_blank">
-  Share on Facebook
-</a>
-
-
-</section>
-
-
-<section>
-  <h1 class="center-head">Popular last words</h1>
-
-  <% @comments.each do |comment| %>
-
-  <div class="cmt">
-
-    <p><%= comment.body %></p>
+  <section id="ur-comment">
+    <h1 class="center-head">Your last message</h1>
+    <p><%= @comment.body %></p>
 
     <article class="show_result">
-      <h3><%= Era.find(Result.find(comment.result_id).era_id).name  %></h3>
-      <p><%= Result.find(comment.result_id).body  %></p>
+      <h3><%= Era.find(Result.find(@comment.result_id).era_id).name  %></h3>
+      <p><%= Result.find(@comment.result_id).body  %></p>
     </article>
 
-    <a href="/vote/<%= @comment.id %>/<%= comment.id %>" class="btn btn-primary">
-      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-      LIKE : 
-      <%= comment.vote %> 
-    </a>
-      
-  </div>
+  <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=http://onceuponatime.wikia.com/wiki/Once_Upon_a_Time_Wiki" target="_blank">
+    Share on Facebook
+  </a>
+  </section>
+  <section class="past-comment">
+    <h1 class="center-head">Popular last words</h1>
 
+    <% @comments.each do |comment| %>
 
- <% end %>
-</section>
-</main>
+    <div class="cmt">
 
+      <p><%= comment.body %></p>
+
+      <article class="show_result">
+        <h3><%= Era.find(Result.find(comment.result_id).era_id).name  %></h3>
+        <p><%= Result.find(comment.result_id).body  %></p>
+      </article>
+
+      <a href="/vote/<%= @comment.id %>/<%= comment.id %>" class="btn btn-primary">
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+        LIKE : 
+        <%= comment.vote %> 
+      </a>
+        
+    </div>
+   <% end %>
+  </section>
 
 
