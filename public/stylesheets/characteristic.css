@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 .state-icon {
     left: -5px;
 }
@@ -26,7 +27,18 @@ background: linear-gradient(to left, #283048  , #859398 );
   font-family: 'Bebas Neue';
   color: #F5FBEF;
   text-align: center;
-  font-size: 80px;
+  font-size: 100px;
+}
+
+.char-button {
+  text-align: center;
+}
+
+.footer-style {
+  text-align: center;
+  font-size: 13px;
+  font-family: "Raleway";
+  line-height: 45px;
 }
 
 
