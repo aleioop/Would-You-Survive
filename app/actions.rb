@@ -76,7 +76,7 @@ post '/comment/new/:id' do
     body: params[:body] )
 
   @comment.save
-  @comments = Comment.all.limit(10)
+  @comments = Comment.all.order(vote: :desc)
   erb :comment
   # session[:comment] = @comment
   # binding.pry
@@ -87,5 +87,10 @@ post '/user' do
   session[:user].weight = params[:weight]
   session[:user].height = params[:height]
   session[:user].save
+  redirect '/char'
+  # redirect '/era'
+end
+
+post '/char' do
   redirect '/era'
 end

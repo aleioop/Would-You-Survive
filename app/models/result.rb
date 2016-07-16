@@ -27,5 +27,6 @@ class Result < ActiveRecord::Base
     Result.create(era_id: 5, body: "You, honorable soldier of the Red Army, only survived a month in Soviet Russia before being shot alongside your fellow army men for deserting the regime.", is_dead: true)
     Result.create(era_id: 5, body: "You, poor peasant, only survived a month in Soviet Russia before dying from frost bite during a trek to the liquor store in Siberia. Shoulda packed some extra vodka huh.", is_dead: true)
     Result.create(era_id: 5, body: "You, american spy, only survived 2 years in Soviet Russia before dying in Stalin's torture chamber.", is_dead: true)
+
   end
 end

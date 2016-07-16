@@ -1,41 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Patua+One');
 @import url('"https://fonts.googleapis.com/css?family=Roboto:400,700"');
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('public/fonts/gotham-bold.ttf') format('truetype');
+}
 
-
-$display-font-family: 'Patua One', sans-serif;
-$base-font-family: Roboto, sans-serif;
+$display-font-family: 'Bebas Neue', sans-serif;
+$base-font-family: 'Roboto', sans-serif;
 $base-line-height: 1.8;
 $base-font-size: 16px;
 
-$site-background-blue: #205165;
-$site-white-color: #FEFDFE;
-$site-mid-dark: #82848C;
-$site-mid-light: #9F9BFA;
-$site-accent-dark: #D7D1D4;
-$site-accent-light: #D29998;
+$site-dark-color: #000500;
+$site-white-color: #F5FBEF;
+$site-mid-dark: #2D3047;
+$site-mid-light: #639FAB;
+$site-accent-dark: #748B75;
 $spacing-unit: $base-font-size * $base-line-height / 2;
 
 
 /* global css goes here */
 body {
-  background-color: $site-background-blue;
+  background: linear-gradient(to left, #283048 , #859398);
   font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $base-line-height;
 }
 
 
 .title-display {
-  background-color: $site-background-blue;
-  font-family: $display-font-family;
-  font-size: 100px;
   color: $site-white-color;
+  font-family: $display-font-family;
+  font-size: 160px;
+  line-height: height;
+
 }
 
 .introduction {
   color: $site-white-color;
 }
 
+
+.index-footer { 
+  bottom: 0px;
+  border-top: 2px solid $site-accent-dark;  
+ }
 
 
 /*  module css goes here */
