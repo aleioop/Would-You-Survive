@@ -76,7 +76,7 @@ post '/comment/new/:id' do
     body: params[:body] )
 
   @comment.save
-  @comments = Comment.all.limit(10)
+  @comments = Comment.all.order(vote: :desc)
   erb :comment
   # session[:comment] = @comment
   # binding.pry

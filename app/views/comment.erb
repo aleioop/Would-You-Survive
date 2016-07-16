@@ -1,34 +1,46 @@
 
 <main>
-
-  <h2>Your comment</h2>
-  <p><%= Era.find(Result.find(@comment.result_id).era_id).name  %></p>
-  <p><%= Result.find(@comment.result_id).body  %></p>
+<section id="ur-comment">
+  <h1 class="center-head">Your last message</h1>
   <p><%= @comment.body %></p>
-  <div>
-    <button type="button">Share on Facebook</button>
 
-<a href="https://www.facebook.com/sharer/sharer.php?u=http://onceuponatime.wikia.com/wiki/Once_Upon_a_Time_Wiki" target="_blank">
+  <article class="show_result">
+    <h3><%= Era.find(Result.find(@comment.result_id).era_id).name  %></h3>
+    <p><%= Result.find(@comment.result_id).body  %></p>
+  </article>
+
+<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=http://onceuponatime.wikia.com/wiki/Once_Upon_a_Time_Wiki" target="_blank">
   Share on Facebook
 </a>
 
 
-<section>
-  <h1>Top 10 last words</h1>
 </section>
+
+
+<section>
+  <h1 class="center-head">Popular last words</h1>
+
   <% @comments.each do |comment| %>
 
-  <div>
-    <button type="button">Like</button>
-    <p><%= comment.vote %> </p>
-    <p><%= Era.find(Result.find(comment.result_id).era_id).name  %></p>
-    <p><%= Result.find(comment.result_id).body  %></p>
+  <div class="cmt">
+
     <p><%= comment.body %></p>
+
+    <article class="show_result">
+      <h3><%= Era.find(Result.find(comment.result_id).era_id).name  %></h3>
+      <p><%= Result.find(comment.result_id).body  %></p>
+    </article>
+
+    <div>
+      LIKE : 
+      <%= comment.vote %> 
+      <button type="button">Like</button>
+    </div>
   </div>
 
 
  <% end %>
-
+</section>
 </main>
 <footer>
   <p>&copy; 2016 KoolKats, Inc.</p>
