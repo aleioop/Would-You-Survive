@@ -2,7 +2,7 @@
   <h1 class=user-info-title>User Information</h1>
 </section>
 <main>
-  <p> Hi <%= session[:user].name %> </p>
+  <p class="facebook-name"> Hi, <%= session[:user].name %> </p>
   <div class="row">
     <div class="col-md-4">
     </div>
@@ -19,10 +19,12 @@
      <div class="col-med-4">
    </div>
  </div>
-  <div class="user-info-button">
+  
+  </form>
+
+</main>
+ <div class="user-info-button">
   <a href="/era">
    <button type="button" class="btn btn-primary">Submit</button></a>
    </div>
-  </form>
-</main>
 
