@@ -2,7 +2,7 @@
   <h1>Select all the traits that you correspond to: </h1>
 </section>
 <main>
-  <form action="/char" method="get">
+  <form action="/char" method="post">
    <% @chars.each do |char| %>
    <input type="checkbox" name="characteristic"><%= char.name %><br>
    <% end %>
