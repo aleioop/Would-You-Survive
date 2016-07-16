@@ -1,6 +1,8 @@
 # Homepage (Root path)
 enable :sessions
-
+  def get_comment
+    @cmt ||= @comment
+  end
 helpers do
 
 end
@@ -67,6 +69,18 @@ get '/auth/facebook/callback' do
   session[:user] = user
   # binding.pry
   erb :info
+end
+
+get '/vote/:user_id/:vote_id' do
+  vote_comment = Comment.find(params[:vote_id])
+  vote_comment.vote = vote_comment.vote + 1
+  vote_comment.save
+
+  @comment = Comment.find(params[:user_id])
+  @comments = Comment.all.order(vote: :desc)
+
+
+  erb :comment
 end
 
 post '/comment/new/:id' do

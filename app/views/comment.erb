@@ -31,11 +31,12 @@
       <p><%= Result.find(comment.result_id).body  %></p>
     </article>
 
-    <div>
+    <a href="/vote/<%= @comment.id %>/<%= comment.id %>" class="btn btn-primary">
+      <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
       LIKE : 
       <%= comment.vote %> 
-      <button type="button">Like</button>
-    </div>
+    </a>
+      
   </div>
 
 

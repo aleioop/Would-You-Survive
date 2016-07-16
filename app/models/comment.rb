@@ -22,6 +22,6 @@ class Comment < ActiveRecord::Base
 
   private
     def zero_vote
-      self.vote = 0
+      self.vote ||= 0
     end
 end
