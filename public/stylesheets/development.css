@@ -1,23 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Patua+One");
 @import url('"https://fonts.googleapis.com/css?family=Roboto:400,700"');
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("public/fonts/gotham-bold.ttf") format("truetype"); }
 /* global css goes here */
 body {
-  background-color: #82848C;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.8; }
+  background: linear-gradient(to left, #283048, #859398);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
 
 .title-display {
-  color: #FEFDFE;
-  font-family: "Patua One", sans-serif;
-  font-size: 109px;
+  color: #F5FBEF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 160px;
   line-height: height; }
 
 .introduction {
-  color: #FEFDFE; }
+  color: #F5FBEF; }
 
 .index-footer {
-  border-top: 2px solid #D7D1D4; }
+  bottom: 0px;
+  border-top: 2px solid #748B75; }
 
 /*  module css goes here */
 /* element css goes here */
