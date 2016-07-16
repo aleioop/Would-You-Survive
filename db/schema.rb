@@ -11,6 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160714021503) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "result_id"
+    t.string  "body"
+    t.integer "vote"
+  end
+
+  create_table "eras", force: :cascade do |t|
+    t.string   "name"
+    t.string   "pic_url"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.integer  "era_id"
+    t.string   "body"
+    t.boolean  "is_dead"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.date     "birthday"
+    t.string   "gender"
+    t.float    "weight"
+    t.float    "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

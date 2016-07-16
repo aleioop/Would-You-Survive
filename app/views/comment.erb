@@ -1,0 +1,23 @@
+<section>
+  <h1>Top 10 last words</h1>
+</section>
+<main>
+
+  <% @comments.each do |comment| %>
+
+  <div>
+    <button type="button">Like</button>
+    <p><%= comment.vote %> </p>
+    <p><%= Era.find(Result.find(comment.reason_id).era_id).name  %></p>
+    <p><%= comment.body %></p>
+  </div>
+
+
+ <% end %>
+
+</main>
+<footer>
+  <p>&copy; 2016 KoolKats, Inc.</p>
+</footer>
+
+

@@ -1,1 +1,39 @@
-<h1>Home Page</h1>
+<!-- Script for basic integration with Facebook. Likely replaced later with the full login script -->
+<!-- TODO: Utilise the full login script - must check if I can hide my authentication tokens and info.  -->
+<!-- TODO: Check in with omniauth facebook -->
+<% erb :'_facebook_script' %>
+
+<!-- Main Index Content Goes Here -->
+<section class="row">
+  <div class="col-md-8">
+    <h1 class="title-display">ONCE UPON A TIME...</h1>
+  </div>
+</section >
+
+<aside>
+
+  <section class="row" >
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <p class="introduction">
+        Welcome to "Once Upon a Time...". Through our sophisticated physical and psychological assessments, we'll determine your likliness of survival in specific time periods during history. We'll require some basic information from you, if you would like to proceed, please authenticate below!  
+      </p>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </section>  
+</aside>
+
+<section class="row">
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-2">
+   <a href="/auth/facebook">
+    <button type="button" class="btn btn-primary">Login with facebook</button>
+  </a>
+  </div>
+    <div class="col-md-7">
+  </div>
+</section>
+

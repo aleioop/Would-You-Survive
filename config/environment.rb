@@ -8,6 +8,16 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
 
+require 'omniauth-facebook' # Facebook Authentication 
+
+
+require 'omniauth'
+require 'omniauth-github'
+
+require 'dotenv'
+Dotenv.load
+
+
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
 
@@ -18,6 +28,11 @@ configure do
 
   enable :sessions
   set :session_secret, ENV['SESSION_KEY'] || 'lighthouselabssecret'
+  
+  use OmniAuth::Builder do
+    provider :github, '', '', scope: "user:email"
+    provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
+  end
 
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end

@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
+<!--<link rel="stylesheet" href="/stylesheets/normalize.css"> -->
   <!--
     application.css is where you put your styles
   -->
-  <link rel="stylesheet" href="/stylesheets/application.css">
+  <link rel="stylesheet" href="/stylesheets/development.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/javascript/application.js"></script>
+  <!-- Typekit Script for Flood Std. Font Test -->
 
-  <title></title>
+  <script src="https://use.typekit.net/aju3eqe.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <title>Would you have survived?</title>
 </head>
-<body>
+<body class="container">
   <%= yield %>
 </body>
+
+
+<footer class="index-footer">
+  <p>&copy; 2016 KoolKats, Inc.</p>
+</footer>
 </html>
 
