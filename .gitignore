@@ -1,5 +1,6 @@
 .env
 .bundle
+>>>>>>> 691cd69a8d7d87f746fa270b6a0d1b454355db09
 /db/*.db
 /db/*.sqlite3
 /db/*.sqlite
