@@ -5,7 +5,7 @@
   src: url("public/fonts/gotham-bold.ttf") format("truetype"); }
 /* global css goes here */
 body {
-  background: linear-gradient(to left, #283048, #859398);
+  background: linear-gradient(to left, #E6DADA, #274046);
   font-family: "Roboto", sans-serif;
   font-size: 16px; }
 
@@ -19,9 +19,7 @@ body {
   color: #F5FBEF; }
 
 .index-footer {
-  position: static;
-  margin-top: 40px;
-  margin-bottom: 5px;
+  position: absolute;
   width: 90%;
   bottom: 0px;
   border-top: 2px solid #748B75;
@@ -29,7 +27,6 @@ body {
   font-size: 13px;
   font-family: "Raleway";
   line-height: 45px; }
-
 
 /*  module css goes here */
 /* element css goes here */
