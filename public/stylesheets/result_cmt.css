@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Roboto|Raleway");
+
 body {
   /*background: linear-gradient(to bottom, #283048  , #859398 );*/
   /*color: #000500;*/
@@ -16,8 +18,29 @@ body {
 
 .center-head {
   font-family: 'Bebas Neue';
+  color: #F5FBEF;
   text-align: center;
+  font-size: 100px;
   
+}
+
+.subtitle {
+  font-family: 'Bebas Neue';
+  color: #F5FBEF;
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.user-name {
+  font-family: 'Cabin';
+  font-size: 20px;
+
+}
+
+.result-text {
+  font-family: 'Raleway';
+  font-size: 15px;
 }
 
 .show_result{
@@ -35,7 +58,7 @@ body {
   margin-right: auto;
   max-width: 700px;
   padding: 30px;
-  box-shadow: 15px 15px 10px #353131;
+  box-shadow: 10px 10px 7px #353131;
   background-color: white;
   border-radius: 10px;
 }

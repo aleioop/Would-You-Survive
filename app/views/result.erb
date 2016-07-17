@@ -4,11 +4,11 @@
 
 <section class="cmt">
   <div>
-    <p>You <span class="died">died</span> because...</p>
+    <p class="user-name"><%= session[:user].name %>...</p>
   </div>
 
   <div>
-    <p>
+    <p class="result-text">
       <%= @result.body %>
     </p>
   </div>
@@ -18,7 +18,7 @@
 
 <form class="last-word" method="post" action="/comment/new/<%= @result.id %>">
   <div class="margin-bot">
-    <h3 class="center-head">Any last words?</h3>
+    <h3 class="subtitle">Any last words?</h3>
     <input type="text" class="form-control input-h " name="body">
   </div>
   <div>
