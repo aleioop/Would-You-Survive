@@ -1,13 +1,29 @@
 class Result < ActiveRecord::Base
   has_many :comments
+  @survival_points = 100
+  @survival_number = 0
 
   def self.random_result(era_id)
     where(era_id: era_id).sample
-  end
+end
+
+def self.bmi_factor(user)
+    bmi = (user.weight/((user.height/100)**2))
+    if bmi.between?(18.5, 24.9)
+        @survival_points += 50
+    elsif bmi < 18.5
+        @survival_points -= 30
+    elsif bmi > 30
+        @survival_points -= 50
+    elsif bmi > 25
+        @survival_points -= 40
+    end
+end
+
 
 
   def self.create_data
-    Result.create(era_id: 1, body: "You lack the ability to communicate with others and must survive as a hermit. 3 weeks into your Stone Age experience you're devoured by a leopard.", is_dead: true)
+    Result.create(era_id: 1, body: "You lack the ability to communicate with others and must survive as a hermit. #{@survival_number} weeks into your Stone Age experience you're devoured by a leopard.", is_dead: true)
     Result.create(era_id: 1, body: "You're able to survive 127 hours until you meet your doom after being crushed by a rock. Like, a really big rock.", is_dead: true)
     Result.create(era_id: 1, body: "You're able to survive a full 6 months in the Stone Age! Impressive! However, due to lack of appropriate food safety, you get an infection and die of dysentary.", is_dead: true)
     Result.create(era_id: 1, body: "You neither have skill in hunting or gathering and 1 week later you die of starvation.", is_dead: true)
