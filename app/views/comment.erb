@@ -1,6 +1,6 @@
 
   <section id="ur-comment">
-    <h1 class="center-head">Your last message</h1>
+    <h1 class="center-head" id="ur-comment-title">Your last message</h1>
     <img src="<%= User.find(@comment.user_id).image %>" >
     <%= @comment.body %>
 
@@ -14,7 +14,7 @@
   </a>
   </section>
   <section class="past-comment">
-    <h1 class="center-head">Popular last words</h1>
+    <h1 id="top-comment-title" class="center-head">Popular last words</h1>
 
     <% @comments.each do |comment| %>
 

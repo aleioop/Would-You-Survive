@@ -5,16 +5,26 @@ body {
   /*color: #000500;*/
 }
 
+#ur-comment-title {
+  color: black;
+  font-size: 60px;
+}
+
 #ur-comment {
   font: 'Bebas Neue';
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 80px;
   max-width: 800px;
   padding: 20px 40px 40px 40px;
   border: 1px white;
   border-radius: 10px;
   background-color: white;
+}
+
+#top-comment-title {
+  font-size: 60px;
 }
 
 .center-head {
