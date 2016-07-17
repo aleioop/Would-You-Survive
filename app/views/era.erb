@@ -3,6 +3,8 @@
 </section>
 <main>
   <section class="row">
+    <div class="col-md-1">
+    </div>
     <% @eras.each do |era| %>
       <a href="/era/<%=era.id%>">
         <div class="col-md-2">
@@ -10,5 +12,7 @@
         </div>
       </a>
     <% end %>
+    <div class="col-md-1">
+    </div>
   </section>
 </main>
