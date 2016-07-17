@@ -1,15 +1,49 @@
 <section>
   <h1 class="era-title">Choose an era</h1>
 </section>
-<main>
-  <% @eras.each do |era| %>
-    <a href="/era/<%=era.id%>">
-      <div>
-        <%=era.name%>
-      </div>
-      <!-- <figure>
-        <img src="<%=era.pic_url%>">
-      </figure> -->
+<main class="era-content">
+  <section class="row">
+    <div class="col-md-1">
+    </div>
+    <a href="/era/1">
+    <div class="col-md-2 icon-box">
+      <img src="https://i.imgur.com/pUi22Bf.png" class="prehistoric-icon icon" />
+    </div>
     </a>
-  <% end %>
+    <a href="/era/2">
+    <div class="col-md-2 icon-box">
+      <img src="http://i.imgur.com/NwtuJb9.png" class="rome-icon icon" />
+    </div>
+    </a>
+    <a href="/era/3">
+    <div class="col-md-2">
+      <img src="https://i.imgur.com/p6rbr3G.png" class="castle-icon icon" />
+    </div>
+    </a>
+    <a href="/era/4">
+    <div class="col-md-2">
+      <img src="https://i.imgur.com/Me57Z53.png" class="sword-icon icon" />
+    </div>
+    </a>
+    <a href="/era/5">
+    <div class="col-md-2">
+      <img src="https://i.imgur.com/up3HjHD.png" class="doll-icon icon" />
+    </div>
+    </a>
+    <div class="col-md-1">
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-md-1">
+    </div>
+    <% @eras.each do |era| %>
+      <a href="/era/<%=era.id%>">
+        <div class="col-md-2 era-names">
+          <%=era.name%>
+        </div>
+      </a>
+    <% end %>
+    <div class="col-md-1">
+    </div>
+  </section>
 </main>
