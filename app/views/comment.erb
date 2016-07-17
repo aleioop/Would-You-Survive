@@ -1,7 +1,8 @@
 
   <section id="ur-comment">
     <h1 class="center-head">Your last message</h1>
-    <p><%= @comment.body %></p>
+    <img src="<%= User.find(@comment.user_id).image %>" >
+    <%= @comment.body %>
 
     <article class="show_result">
       <h3><%= Era.find(Result.find(@comment.result_id).era_id).name  %></h3>
@@ -19,7 +20,8 @@
 
     <div class="cmt">
 
-      <p><%= comment.body %></p>
+      <img src="<%= User.find(comment.user_id).image %>" >
+      <%= comment.body %>
 
       <article class="show_result">
         <h3><%= Era.find(Result.find(comment.result_id).era_id).name  %></h3>
