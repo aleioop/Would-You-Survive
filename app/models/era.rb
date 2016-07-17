@@ -7,6 +7,5 @@ class Era < ActiveRecord::Base
     Era.create(name: "Dark Ages")
     Era.create(name: "Edo Period")
     Era.create(name: "Soviet Russia")
-    Era.create(name: "Pokemon Go future")
   end
 end
