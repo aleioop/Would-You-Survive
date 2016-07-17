@@ -38,12 +38,16 @@ body {
   color: $site-white-color;
 }
 
-
-.index-footer { 
-  position: absolute;
+.index-footer {
+  margin-top: 20px; 
+  position: inline-grid;
   width: 90%;
   bottom: 0px;
-  border-top: 2px solid $site-accent-dark;  
+  border-top: 2px solid $site-accent-dark; 
+  text-align: center;
+  font-size: 13px;
+  font-family: "Raleway";
+  line-height: 45px;
  }
 
 

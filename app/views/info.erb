@@ -2,35 +2,29 @@
   <h1 class=user-info-title>User Information</h1>
 </section>
 <main>
-  Hi <%= session[:user].name %>
+  <p class="facebook-name"> Hi, <%= session[:user].name %> </p>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
   <form method="post" action="/user">
     <fieldset class="form-group">
-      <label> Weight: </label>
-      <input type="text" name="weight" class="form-control">
-      <label>kg</label>
+      <label> Weight </label>
+      <input type="text" name="weight" class="form-control" placeholder="Weight in kg">
     </fieldset>
     <fieldset class="form-group">
-      <label>Height: </label>
-      <input type="text" name="height" class="form-control">
-      <label>cm</label>
+      <label>Height </label>
+      <input type="text" name="height" class="form-control" placeholder="Height in cm">
     </fieldset>
-
-    <div>
-      <input type="submit" value="Submit" class="btn btn-primary btn-lg round">
-    </div>
+     <div class="col-med-4">
+   </div>
+ </div>
+  
   </form>
-</main>
-<footer>
-  <p>&copy; 2016 KoolKats, Inc.</p>
-</footer>
 
-<form>
-  <fieldset class="form-group">
-    <label for="formGroupExampleInput">Example label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-  </fieldset>
-  <fieldset class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-  </fieldset>
-</form>
+</main>
+ <div class="user-info-button">
+  <a href="/era">
+   <button type="button" class="btn btn-primary">Submit</button></a>
+   </div>
+
