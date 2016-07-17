@@ -2,14 +2,17 @@
   <h1 class="era-title">Choose an era</h1>
 </section>
 <main>
-  <% @eras.each do |era| %>
-    <a href="/era/<%=era.id%>">
-      <div>
-        <%=era.name%>
-      </div>
-      <!-- <figure>
-        <img src="<%=era.pic_url%>">
-      </figure> -->
-    </a>
-  <% end %>
+  <section class="row">
+    <div class="col-md-1">
+    </div>
+    <% @eras.each do |era| %>
+      <a href="/era/<%=era.id%>">
+        <div class="col-md-2">
+          <%=era.name%>
+        </div>
+      </a>
+    <% end %>
+    <div class="col-md-1">
+    </div>
+  </section>
 </main>
