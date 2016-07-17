@@ -5,7 +5,7 @@
   src: url("public/fonts/gotham-bold.ttf") format("truetype"); }
 /* global css goes here */
 body {
-  background: linear-gradient(to left, #283048, #859398);
+  background: linear-gradient(to left, #E6DADA, #274046);
   font-family: "Roboto", sans-serif;
   font-size: 16px; }
 
