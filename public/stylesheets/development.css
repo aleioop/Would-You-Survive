@@ -29,6 +29,9 @@ body {
   font-family: "Raleway";
   line-height: 45px; }
 
+.info-page {
+  margin-bottom: 210px; }
+
 /*  module css goes here */
 .era-content {
   margin-top: 30px;
