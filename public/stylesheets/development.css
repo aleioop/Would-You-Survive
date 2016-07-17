@@ -21,15 +21,49 @@ body {
 .index-footer {
   margin-top: 20px;
   position: inline-grid;
-  width: 90%;
+  width: 100%;
   bottom: 0px;
-  border-top: 2px solid #748B75;
+  border-top: 2px solid #639FAB;
   text-align: center;
   font-size: 13px;
   font-family: "Raleway";
   line-height: 45px; }
 
 /*  module css goes here */
+.era-content {
+  margin-top: 30px;
+  margin-bottom: 240px; }
+
+.era-names {
+  text-align: center;
+  color: #F5FBEF; }
+
+.era-names:hover {
+  color: #639FAB;
+  text-decoration: underline; }
+
+.icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px; }
+
+.rome-icon {
+  width: 135.2px;
+  padding-top: 5px; }
+
+.prehistoric-icon {
+  height: 93.6px; }
+
+.castle-icon {
+  width: 130px; }
+
+.sword-icon {
+  width: 110.5px; }
+
+.doll-icon {
+  height: 93.6px; }
+
 /* element css goes here */
 
 /*# sourceMappingURL=development.css.map */
