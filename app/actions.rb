@@ -38,12 +38,7 @@ get '/char' do
 end
 
 get '/result' do
-  # result = Result.new
-  # @survival_points = Result.bmi_factor(session[:user])
-  # @survival_number = @survival_points / rand(1.2..1.8).to_i
   @result = Result.random_result(4)
-  # binding.pry
-  # @result = Result.random_result(params[:era_id])
   erb :result
 end
 
@@ -52,19 +47,12 @@ get '/comment' do
   erb :comment
 end
 
-# get '/:era_id/result' do
-#   @result = Result.random_result(params[:era_id])
-#   erb :result
-# end
 
 get '/top_last_word' do
   @words = Comment.top_words
   erb :top_last_word
 end
 
-# get '/auth/github/callback' do
-#   erb :info
-# end
 
 get '/auth/facebook/callback' do
   auth = request.env['omniauth.auth']
@@ -76,7 +64,6 @@ get '/auth/facebook/callback' do
     )
   session.clear
   session[:user] = user
-  # binding.pry
   erb :info
 end
 
@@ -100,10 +87,7 @@ post '/comment/new/:id' do
 
   @comment.save
   @comments = Comment.all.order(vote: :desc)
-  erb :comment
-  # session[:comment] = @comment
-  # binding.pry
-  # redirect '/comment'
+  erb :comment 
 end
 
 post '/user' do
@@ -112,7 +96,6 @@ post '/user' do
   session[:user].height = params[:height]
   session[:user].save
   redirect '/char'
-  # redirect '/era'
 end
 
 post '/char' do
