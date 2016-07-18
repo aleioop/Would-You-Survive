@@ -13,10 +13,14 @@ body {
   color: #F5FBEF;
   font-family: "Bebas Neue", sans-serif;
   font-size: 160px;
-  line-height: height; }
+  line-height: height;
+   }
+
 
 .introduction {
-  color: #F5FBEF; }
+  color: #F5FBEF;
+  }
+
 
 .index-footer {
   margin-top: 20px;

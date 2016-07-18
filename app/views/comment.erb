@@ -1,15 +1,15 @@
 
   <section id="ur-comment">
-    <h1 class="center-head" id="ur-comment-title">Your last message</h1>
+    <h1 class="center-head" id="ur-comment-title">Your last words</h1>
     <img src="<%= User.find(@comment.user_id).image %>" >
-    <%= @comment.body %>
+     &nbsp; <%= @comment.body %>
 
     <article class="show_result">
       <h3><%= Era.find(Result.find(@comment.result_id).era_id).name  %></h3>
       <p><%= Result.find(@comment.result_id).body  %></p>
     </article>
 
-  <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=http://onceuponatime.wikia.com/wiki/Once_Upon_a_Time_Wiki" target="_blank">
+  <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/photo.php?fbid=10206636736932826&set=a.10200984765037061.1073741829.1104727267&type=3&theater" target="_blank">
     Share on Facebook
   </a>
   </section>
