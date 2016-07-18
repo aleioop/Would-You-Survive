@@ -23,7 +23,12 @@ get '/era' do
 end
 
 get '/era/:id' do
+  user_id = session[:user].id
+  
+  @survival_points = Result.bmi_factor(User.find(user_id))
   @result = Result.random_result(params[:id])
+  @result.body.gsub!('CODESUB', @survival_points.to_s)
+  # binding.pry
   erb :result
 end
 
@@ -33,7 +38,11 @@ get '/char' do
 end
 
 get '/result' do
+  # result = Result.new
+  # @survival_points = Result.bmi_factor(session[:user])
+  # @survival_number = @survival_points / rand(1.2..1.8).to_i
   @result = Result.random_result(4)
+  # binding.pry
   # @result = Result.random_result(params[:era_id])
   erb :result
 end
@@ -98,6 +107,7 @@ post '/comment/new/:id' do
 end
 
 post '/user' do
+
   session[:user].weight = params[:weight]
   session[:user].height = params[:height]
   session[:user].save
