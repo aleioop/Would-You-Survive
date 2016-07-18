@@ -16,7 +16,7 @@
 
 
 
-<form class="last-word" method="post" action="/comment/new/<%= @result.id %>">
+<form class="last-word" method="post" action="/comment/new/<%= @result.id %>/<%= @result.body %>">
   <div class="margin-bot">
     <h3 class="subtitle">Any last words?</h3>
     <input type="text" class="form-control input-h " name="body">

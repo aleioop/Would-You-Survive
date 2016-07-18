@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160715122010) do
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "result_id"
+    t.string  "result_full"
     t.string  "body"
     t.integer "vote"
   end
