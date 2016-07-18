@@ -101,6 +101,7 @@ post '/user' do
   session[:user].weight = params[:weight]
   session[:user].height = params[:height]
   session[:user].save
+  # binding.pry
   redirect '/char'
   # redirect '/era'
 end
