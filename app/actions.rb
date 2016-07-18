@@ -28,7 +28,7 @@ get '/era/:id' do
   @survival_points = Result.bmi_factor(User.find(user_id))
   @result = Result.random_result(params[:id])
   @result.body.gsub!('CODESUB', @survival_points.to_s)
-  binding.pry
+  # binding.pry
   erb :result
 end
 
