@@ -1,35 +1,29 @@
-<main class="info-page">
-  <section>
-    <h1 class=user-info-title>User Information</h1>
-  </section>
 
-  <main>
-    <p class="facebook-name"> Hi, <%= session[:user].name %> </p>
-    <div class="row">
-      <div class="col-md-4">
-      </div>
+<section>
+ <h1 class=user-info-title>Health Information</h1>
+</section>
 
-      <div class="col-md-4">
-        <form method="post" action="/user">
-          <fieldset class="form-group">
-            <label> Weight </label>
-            <input type="text" name="weight" class="form-control" placeholder="Weight in kg">
-          </fieldset>
-          <fieldset class="form-group">
-            <label>Height </label>
-            <input type="text" name="height" class="form-control" placeholder="Height in cm">
-          </fieldset>
-        </form>
-      </div>
+<main>
+ <p class="facebook-name"> Hi, <%= session[:user].name %> </p>
+ <div class="row">
+   <div class="col-md-4">
+   </div>
 
-      <div class="col-med-4">
-      </div>
+    <div class="col-md-4">
+      <form method="post" action="/user">
+        <fieldset class="form-group">
+         <label> Weight </label>
+         <input type="text" name="weight" class="form-control" placeholder="Weight in kg">
+       </fieldset>
+       <fieldset class="form-group">
+         <label>Height </label>
+         <input type="text" name="height" class="form-control" placeholder="Height in cm">
+       </fieldset>
+       <button type="submit" class="btn btn-primary hvr-push">Submit</button>
+     </form>
+   </div>
+
+    <div class="col-md-4">
     </div>
-  </main>
-
- <div class="user-info-button">
-  <a href="/char">
-    <button type="button" class="btn btn-primary">Submit</button>
-  </a>
-</div>
-
+  </div>
+</main>
