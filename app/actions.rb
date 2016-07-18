@@ -1,4 +1,5 @@
 # Homepage (Root path)
+
 enable :sessions
   def get_comment
     @cmt ||= @comment
@@ -28,6 +29,9 @@ get '/era/:id' do
   @survival_points = Result.bmi_factor(User.find(user_id))
   @result = Result.random_result(params[:id])
   @result.body.gsub!('CODESUB', @survival_points.to_s)
+  
+  # set :point, @survival_points
+  # @@point = @survival_points
   # binding.pry
   erb :result
 end
@@ -92,14 +96,20 @@ get '/vote/:user_id/:vote_id' do
   erb :comment
 end
 
-post '/comment/new/:id' do
+post '/comment/new/:id/:result' do
   @comment = Comment.new(
     user_id: session[:user].id,
     result_id: params[:id],
-    body: params[:body] )
+    body: params[:body],
+    result_full: params[:result]
+    )
 
   @comment.save
   @comments = Comment.all.order(vote: :desc)
+
+# :point
+# binding.pry
+
   erb :comment
   # session[:comment] = @comment
   # binding.pry
@@ -111,6 +121,7 @@ post '/user' do
   session[:user].weight = params[:weight]
   session[:user].height = params[:height]
   session[:user].save
+  # binding.pry
   redirect '/char'
   # redirect '/era'
 end
