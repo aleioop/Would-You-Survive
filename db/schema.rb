@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714021503) do
+ActiveRecord::Schema.define(version: 20160715122010) do
+
+  create_table "characteristics", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "result_id"
+    t.string  "result_full"
     t.string  "body"
     t.integer "vote"
   end
@@ -37,7 +44,10 @@ ActiveRecord::Schema.define(version: 20160714021503) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "fbid"
     t.string   "name"
+    t.string   "email"
+    t.string   "image"
     t.date     "birthday"
     t.string   "gender"
     t.float    "weight"

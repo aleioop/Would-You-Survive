@@ -1,24 +1,33 @@
+
 <section>
-  <h1>User Information</h1>
+ <h1 class=user-info-title>Health Information</h1>
 </section>
+
 <main>
-  <form method="post" action="/user/new">
-    <div>
-      <label> Weight: </label>
-      <input type="text" name="weight">
-      <label>kg</label>
+ <p class="facebook-name"> Hi, <%= session[:user].name %> </p>
+ <div class="row">
+   <div class="col-md-4">
+   </div>
+   <div class="col-md-4">
+ <form method="post" action="/user">
+   <fieldset class="form-group">
+     <label> Weight </label>
+     <input type="text" name="weight" class="form-control" placeholder="Weight in kg">
+   </fieldset>
+   <fieldset class="form-group">
+     <label>Height </label>
+     <input type="text" name="height" class="form-control" placeholder="Height in cm">
+   </fieldset>
+   <div class="user-info-button">
+   <button type="submit" class="btn btn-primary hvr-push">Submit</button>
+   </div>
+    </form>
+    <div class="col-md-4">
     </div>
-    <div>
-      <label>Height: </label>
-      <input type="text" name="height">
 
-      <label>cm</label>
-
-    <div>
-      <input type="submit" value="Submit">
-    </div>
-  </form>
+  </div>
 </main>
-<footer>
-  <p>&copy; 2016 KoolKats, Inc.</p>
-</footer>
+
+
+
+   

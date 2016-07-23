@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+  color: rgb(204, 204, 204);
+   /*background-color: rgb(204, 204, 204);*/
+  background: linear-gradient(to bottom,#000000 0,#656a6f 100%);
+}
+
+#bootstrap-overrides.active {
+  background: #96bdc6;
+  border-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+#bootstrap-overrides {
+  background-color: white;
+}
+
+body {
+background: linear-gradient(to left, #283048  , #859398 );
+}
+
+.char-title {
+  font-family: 'Bebas Neue';
+  color: #F5FBEF;
+  text-align: center;
+  font-size: 100px;
+}
+
+.char-button {
+  text-align: center;
+}
+
+.footer-style {
+  text-align: center;
+  font-size: 13px;
+  font-family: "Raleway";
+  line-height: 45px;
+}
+
+

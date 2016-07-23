@@ -1,39 +1,29 @@
-<section>
-  <h1>Your Fate</h1>
-</section>
 <main>
 
+<h1 class="center-head">Your Fate</h1>
+
+<section class="cmt">
   <div>
-    <p>You died because...</p>
+    <p class="user-name"><%= session[:user].name %>...</p>
   </div>
 
   <div>
-      <p>
-        <%= @result.body %>
-      </p>
+    <p class="result-text">
+      <%= @result.body %>
+    </p>
   </div>
-
-
-  
+</section>
 
 
 
+<form class="last-word" method="post" action="/comment/new/<%= @result.id %>/<%= @result.body %>">
+  <div class="margin-bot">
+    <h3 class="subtitle">Any last words?</h3>
+    <input type="text" class="form-control input-h " name="body">
+  </div>
   <div>
-    <form method="post" action="/comment/new">
-      <div>
-        <label>Any last words?</label>
-        <input type="text" name="last_words">
-      </div>
-      <div>
-        <input type="submit" value="Submit">
-      </div>
-      <div>
-        <button type="button">Share on Facebook</button>
-      </div> 
-    </form>
+    <input type="submit" value="Submit" class="btn btn-primary btn-lg round">
   </div>
-  <div><a href="/comment" >See top 10 last words</a></div>
+</form>
+
 </main>
-<footer>
-  <p>&copy; 2016 KoolKats, Inc.</p>
-</footer>

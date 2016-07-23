@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.user-info-title {
+  font-family: 'Bebas Neue';
+  color: #F5FBEF;
+  text-align: center;
+  font-size: 100px;
+}
+
+.user-info-button {
+  align-content: center;
+}
+
+.facebook-name {
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 20px;
+  color: #F5FBEF;
+  
+}
+
+

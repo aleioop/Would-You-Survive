@@ -1,15 +1,48 @@
 class Result < ActiveRecord::Base
   has_many :comments
+  @survival_points = 100
+  @survival_number = 0
 
   def self.random_result(era_id)
     where(era_id: era_id).sample
-  end
+end
+
+def self.bmi_factor(user)
+    bmi = (user.weight/((user.height/100)**2))
+    if bmi.between?(18.5, 24.9)
+        @survival_points += 50
+    elsif bmi < 18.5
+        @survival_points -= 30
+    elsif bmi > 30
+        @survival_points -= 50
+    elsif bmi > 25
+        @survival_points -= 40
+    end
+    (@survival_points / rand(1.2..1.8)).to_i
+end
 
 
   def self.create_data
-    Result.create(era_id: 3, body: "Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.", is_dead: true)
-    Result.create(era_id: 4, body: "Business model canvas paradigm shift holy grail technology crowdsource buyer investor partnership business plan low hanging fruit disruptive influencer mass market metrics. Customer return on investment facebook business model canvas metrics series A financing iPhone business-to-business. Customer business-to-business buyer social proof advisor infrastructure marketing release funding stealth user experience gamification. User experience analytics ecosystem conversion business-to-consumer launch party creative agile development crowdsource customer. Responsive web design virality scrum project crowdsource gen-z early adopters rockstar. Lean startup monetization ecosystem influencer burn rate hypotheses. Scrum project bandwidth business plan product management release lean startup customer. Equity social media investor business model canvas long tail pivot MVP market conversion termsheet value proposition android advisor beta. Release iPad disruptive assets incubator. Buyer product management analytics value proposition infographic supply chain partner network gamification.", is_dead: true)
-    Result.create(era_id: 5, body: "Product management deployment interaction design stealth angel investor social media customer. Market advisor interaction design. Stealth low hanging fruit product management MVP sales conversion startup. Direct mailing ramen innovator MVP business model canvas crowdsource validation product management agile development prototype stealth. Supply chain early adopters growth hacking backing churn rate marketing gen-z alpha. Partner network validation conversion accelerator stock user experience branding bootstrapping iPhone growth hacking A/B testing. Network effects beta influencer product management. Seed money pivot crowdsource infographic advisor buyer pitch technology seed round venture. Business model canvas assets alpha funding founders pivot return on investment low hanging fruit long tail. Handshake deployment client direct mailing mass market.", is_dead: true)
-    Result.create(era_id: 6, body: "Buzz social media user experience conversion pivot metrics branding partner network assets low hanging fruit. Accelerator social media business model canvas pitch android. Research & development churn rate infrastructure pitch first mover advantage beta creative virality validation launch party. Venture pivot launch party incubator handshake. Funding venture traction ramen social proof marketing android growth hacking infrastructure leverage founders. Early adopters ownership social media learning curve investor seed money entrepreneur metrics responsive web design marketing direct mailing. Infrastructure direct mailing stealth leverage pivot twitter infographic. Assets strategy metrics scrum project launch party. Conversion success infrastructure partner network return on investment buyer focus angel investor funding graphical user interface bootstrapping lean startup facebook. Investor series A financing vesting period early adopters MVP churn rate social proof social media growth hacking value proposition freemium.", is_dead: true)
+    Result.create(era_id: 1, body: "You lack the ability to communicate with others and must survive as a hermit. CODESUB weeks into your Stone Age experience you're devoured by a leopard.", is_dead: true)
+    Result.create(era_id: 1, body: "You're able to survive 127 hours until you meet your doom after being crushed by a rock. Like, a really big rock.", is_dead: true)
+    Result.create(era_id: 1, body: "You're able to survive a full CODESUB months in the Stone Age! Impressive! However, due to lack of appropriate food safety, you get an infection and die of dysentary.", is_dead: true)
+    Result.create(era_id: 1, body: "You neither have skill in hunting or gathering and CODESUB weeks later you die of starvation.", is_dead: true)
+    Result.create(era_id: 2, body: "As a mere plebeian you must sleep in tigh cramped dirty quarters every night. Your frail immune system only lasts CODESUB weeks before you perish from malaria.", is_dead: true)
+    Result.create(era_id: 2, body: "As a noble gladiator you only survived CODESUB weeks in Ancient Rome before getting your head chopped off at the Coloseum's weekly gladiatorial contest.", is_dead: true)
+    Result.create(era_id: 2, body: "As a slave to the Aquillia patrician family you died of exhaustion CODESUB hours after you arrived in Ancient Rome.", is_dead: true)
+    Result.create(era_id: 2, body: "As a petty chariot thief you survived only CODESUB weeks in Ancient Rome before being thrown into a cage filled with wild beasts to entertain the emperor.", is_dead: true)
+    Result.create(era_id: 3, body: "As an esteemed village blacksmith you only survied CODESUB months in the Dark Ages before dying of the Black plague. Back in black eh.", is_dead: true)
+    Result.create(era_id: 3, body: "As Lord of the Worcestershire Commune you only survived CODESUB weeks in the Dark Ages before being killed in a peasant uprising.", is_dead: true)
+    Result.create(era_id: 3, body: "As town jester you only survived CODESUB weeks in the Dark Ages before dying in the aftermath of a tavern brawl.", is_dead: true)
+    Result.create(era_id: 3, body: "As knight in shining armour you only survived CODESUB months in the Dark Ages before being stabbed in the chest by your ugly cousin during a duel for the hand of a fair maiden.", is_dead: true)
+    Result.create(era_id: 4, body: "As Samurai Champloo you only survived CODESUB days in the Edo Period before being sawed in half by the Shogun.", is_dead: true)
+    Result.create(era_id: 4, body: "As a commoner you only survived CODESUB weeks in the Edo Period before being sliced in 10 pieces by a Samurai.", is_dead: true)
+    Result.create(era_id: 4, body: "You try to scrape together a meager living as a farmer, but only survive CODESUB days in the Edo Period before dying of famine.", is_dead: true)
+    Result.create(era_id: 4, body: "You, the Tokugawan Shogun, only survived CODESUB months in the Edo Period before being boiled to death by your unhappy subjects. That's why mama said be nice.", is_dead: true)
+    Result.create(era_id: 5, body: "You, Stalin's right arm, only survived CODESUB months in Soviet Russia before being assassinated by the NKVD. Your existence can't be proven #censorship #bigbrother.", is_dead: true)
+    Result.create(era_id: 5, body: "You, honorable soldier of the Red Army, only survived CODESUB months in Soviet Russia before being shot alongside your fellow army men for deserting the regime. Red Army, literally.", is_dead: true)
+    Result.create(era_id: 5, body: "As the temperatures approach absolut zero, unaccustomed to the cruel winters of Siberia, you succumb to frost bite within CODESUB months.", is_dead: true)
+    Result.create(era_id: 5, body: "You, with your excellent  English, are labelled an American spy and only survive CODESUB weeks in Soviet Russia before dying in Stalin's torture chambers.", is_dead: true)
+
   end
 end

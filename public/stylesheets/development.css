@@ -5,7 +5,7 @@
   src: url("public/fonts/gotham-bold.ttf") format("truetype"); }
 /* global css goes here */
 body {
-  background: linear-gradient(to left, #283048, #859398);
+  background: linear-gradient(to left, #E6DADA, #274046);
   font-family: "Roboto", sans-serif;
   font-size: 16px; }
 
@@ -13,18 +13,64 @@ body {
   color: #F5FBEF;
   font-family: "Bebas Neue", sans-serif;
   font-size: 160px;
-  line-height: height; }
+  line-height: height;
+   }
+
 
 .introduction {
-  color: #F5FBEF; }
+  color: #F5FBEF;
+  }
+
 
 .index-footer {
-  position: absolute;
-  width: 90%;
+  margin-top: 20px;
+  position: inline-grid;
+  width: 100%;
   bottom: 0px;
-  border-top: 2px solid #748B75; }
+  border-top: 2px solid #639FAB;
+  text-align: center;
+  font-size: 13px;
+  font-family: "Raleway";
+  line-height: 45px; }
+
+.info-page {
+  margin-bottom: 210px; }
 
 /*  module css goes here */
+.era-content {
+  margin-top: 30px;
+  margin-bottom: 240px; }
+
+.era-names {
+  text-align: center;
+  color: #F5FBEF; }
+
+.era-names:hover {
+  color: #639FAB;
+  text-decoration: underline; }
+
+.icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px; }
+
+.rome-icon {
+  width: 135.2px;
+  padding-top: 5px; }
+
+.prehistoric-icon {
+  height: 93.6px; }
+
+.castle-icon {
+  width: 130px; }
+
+.sword-icon {
+  width: 110.5px; }
+
+.doll-icon {
+  height: 93.6px; }
+
 /* element css goes here */
 
 /*# sourceMappingURL=development.css.map */

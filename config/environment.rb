@@ -30,6 +30,7 @@ configure do
   set :session_secret, ENV['SESSION_KEY'] || 'lighthouselabssecret'
   
   use OmniAuth::Builder do
+    
     provider :github, '', '', scope: "user:email"
     provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET']
   end

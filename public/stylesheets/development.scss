@@ -20,7 +20,7 @@ $spacing-unit: $base-font-size * $base-line-height / 2;
 
 /* global css goes here */
 body {
-  background: linear-gradient(to left, #283048 , #859398);
+  background: linear-gradient(to left, #E6DADA , #274046);
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
@@ -38,16 +38,66 @@ body {
   color: $site-white-color;
 }
 
-
-.index-footer { 
-  position: absolute;
-  width: 90%;
+.index-footer {
+  margin-top: 20px; 
+  position: inline-grid;
+  width: 100%;
   bottom: 0px;
-  border-top: 2px solid $site-accent-dark;  
+  border-top: 2px solid $site-mid-light; 
+  text-align: center;
+  font-size: 13px;
+  font-family: "Raleway";
+  line-height: 45px;
+ }
+
+ .info-page{
+  margin-bottom: 210px;
  }
 
 
 /*  module css goes here */
+.era-content{
+  margin-top: 30px;
+  margin-bottom: 240px;
+}
+
+.era-names{
+  text-align: center;
+  color: $site-white-color;
+}
+
+.era-names:hover{
+  color: $site-mid-light;
+  text-decoration: underline;
+}
+
+.icon{  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.rome-icon {
+  width: 104px*1.3;
+  padding-top: 5px;
+}
+
+.prehistoric-icon {
+  height: 72px*1.3;
+}
+
+.castle-icon {
+  width: 100px*1.3;
+}
+
+.sword-icon {
+  width: 85px*1.3;
+}
+
+.doll-icon {
+  height: 72px*1.3;
+}
 
 
 

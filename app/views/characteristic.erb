@@ -1,0 +1,25 @@
+<section>
+  <h1 class="char-title">Select your traits </h1>
+</section>
+<main>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+    <ul class="list-group checked-list-box">
+     <% @chars.each do |char| %>
+     <li class="list-group-item" id="bootstrap-overrides"> <%= char.name %></li>
+     <% end %>
+   </ul>
+   </div>
+   <div class="col-med-4">
+   </div>
+  
+ </div>
+  <div class="char-button">
+  <a href="/era">
+   <button type="button" class="btn btn-primary">Submit</button></a>
+   </div>
+</main>
+
+
