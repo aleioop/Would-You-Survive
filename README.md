@@ -2,31 +2,14 @@ Sinatra
 =============
 
 Brought to you by Lighthouse Labs
+Midterm project, ideated by the Lighthouse Labs Calgary cohort, implemented by a team at Lighthouse Labs Vancouver over 3 days. 
 
-## Getting Started
+1/ bundle install
+2/ bundle exec shotgun -p 3000 -o 0.0.0.0
+3/ visit localhost/3000 
 
-1. `bundle install`
-2. `shotgun -p 3000 -o 0.0.0.0`
-3. Visit `http://localhost:3000/` in your browser
+Will You Survive was suggested as web game, where the user supplies some basic physical and psychological information, picks a historical era, and is informed how long they'll survive. 
+Users authenticate through a Facebook login (currently in a developer mode, application would require review by Facebook for public users). Once authenticated, they navigate through our Sinatra frameworked based site. Height and weight is entered as well as a variety of character traits. The user picks one of five eras, and an result is generated from our SQL database. They can then post a comment about their result, which is stored in our database, and can be shared on Facebook as a comment. The share link is a placeholder since the website is not live.  
 
-rake db:create_migration NAME=add_<table>
 
-#### GIT FLOW ############
-
-git checkout development    # Change your branch to the development branch 
-
-git checkout -b myNewBranch development    # Add a new branch from which we work on our features. JUST USE CHECKOUT WITHOUT IF BRANCH EXISTS
-
-<do work, right now youre in the myNewBranch>
-
-git commit -am "Hey guys I added this new feature"   # Commit, adding detailed comments on what was done
-
-git checkout development    ## CHANGED TO THE DEVELOPMENT BRANCH######
-
-git merge --no-ff myNewBranch   ## Merge your features in your other branch with the development branch which you're in ###
-
-OPTIONAL
-
-git branch -d myNewBranch 
-## Delete the branch, changes are still recorded, just no longer active. For after you're completely done with a features ###
 
